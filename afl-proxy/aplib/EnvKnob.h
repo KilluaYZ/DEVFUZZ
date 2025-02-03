@@ -8,6 +8,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string>
+#include <stdint.h>
 
 class EnvKnob {
 public:

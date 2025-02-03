@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdint.h>
+
 enum class SHMOpenType { CREATE, CONNECT };
 template <typename T> class SHM {
 public:

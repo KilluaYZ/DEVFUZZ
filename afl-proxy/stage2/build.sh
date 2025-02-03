@@ -3,7 +3,7 @@
 # 2018 Tong Zhang<t.zhang2@partner.samsung.com>
 # 2020-2021 Tong Zhang<ztong0001@gmail.com>
 # 2022 Yilun Wu<yiluwu@cs.stonybrook.edu>
-
+set -eo pipefail
 function build
 {
     echo "NOTE: specify your own LLVM_DIR and LLVM_ROOT"
@@ -14,8 +14,8 @@ function build
     mkdir build
     pushd build
     cmake ../ \
-        -DLLVM_CMAKE_PATH=/opt/toolchain/main/lib/cmake \
-        -DCMAKE_BUILD_TYPE=Debug \
+        -DCMAKE_BUILD_TYPE=Debug 
+        # -DLLVM_CMAKE_PATH=/opt/toolchain/main/lib/cmake \
 
     make -j${JOBS}
     popd

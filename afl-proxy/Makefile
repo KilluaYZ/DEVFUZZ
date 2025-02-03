@@ -10,8 +10,9 @@ endif
 
 all: $(SUBDIRS) stage2
 
+
 stage2:
-	cd stage2 && ./build.sh build && cd ..
+	cd stage2 && bash ./build.sh build && cd ..
 
 $(SUBDIRS):
 	$(MAKE) -C $@
@@ -24,7 +25,7 @@ clean: clean_stage2
 	done 
 
 clean_stage2:
-	cd stage2 && ./build.sh clean && cd ..
+	cd stage2 && bash ./build.sh clean && cd ..
 
 indent:
 	clang-format -i -style=file `find $d -name '*.cpp' -or -name "*.h" -or -name "*.c" -or -name "*.cc" -or -name "*.cpp"`
