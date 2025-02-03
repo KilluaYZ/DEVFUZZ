@@ -1,5 +1,5 @@
-[submodule "AFL"]
-	path = AFL
+[submodule "afl"]
+	path = afl
 	url = git@github.com:yiluwusbu/AFL.git
 [submodule "s2e/source/qemu"]
 	path = s2e/source/qemu
